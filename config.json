@@ -1,0 +1,18 @@
+{
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/sample_blog",
+    "prod_uri": "mysql://root:@localhost/sample_blog",
+    "fb_url": "https://www.facebook.com/login/",
+    "tw_url": "https://twitter.com/login?lang=en",
+    "gh_url": "https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home",
+    "blog_name": "Divyam's Blog",
+    "tag_line": "Where future is made!",
+    "gmail_user": "divyamjain2907@gmail.com",
+    "gmail_pw": "mindtree",
+    "about_text": "Divyam has been starting, growing, and monetizing websites since 2014. While in college, he began to learn about digital marketing. After graduating, he continued to build a diverse portfolio of websites while working a full time job. After years of building the portfolio on the side, he made the jump to run his websites full time.",
+    "noofposts": 2,
+    "admin_user": "Divyam",
+    "admin_pass": "Div",
+    "file_location": "C:\\Users\\Divyam\\PycharmProjects\\Python\\Flask\\Flask3_Tech blog\\static\\assets\\img",
+    "Variable": "None"
+}

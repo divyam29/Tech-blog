@@ -1,0 +1,185 @@
+{% extends "layout.html" %} {%block body%}
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('{{url_for('static' ,filename='assets/img/contact-bg.jpg')}}')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="page-heading">
+          <h1>EDIT</h1>
+          <span class="subheading">Add / Edit Posts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="my-5">
+          <!-- * * * * * * * * * * * * * * *-->
+          <!-- * * SB Forms Contact Form * *-->
+          <!-- * * * * * * * * * * * * * * *-->
+          <!-- This form is pre-integrated with SB Forms.-->
+          <!-- To make this form functional, sign up at-->
+          <!-- https://startbootstrap.com/solution/contact-forms-->
+          <!-- to get an API token!-->
+
+          <center>
+            <h2 style="text-decoration: underline">Basic Actions</h2>
+            <br />
+            <a href="/logout"
+              ><button class="btn btn-primary">Logout</button></a
+            >
+            <a href="/dashboard"
+              ><button class="btn btn-primary">Dashboard Home</button></a
+            >
+            <a href="/edit/0"
+              ><button class="btn btn-primary">Add Post</button></a
+            >
+            <hr />
+            <h2 style="text-decoration: underline">Upload a File</h2>
+            <br />
+            <form
+              action="/upload"
+              class="uploader"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <input type="file" name="img_file" />
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            {% if msg %}
+            <p><strong>{{msg}}</strong></p>
+            {% endif %}
+            <hr />
+            <h2 style="text-decoration: underline">Edit / Delete Posts</h2>
+            <br />
+          </center>
+
+          <form
+            id="contactForm"
+            action="/edit/{{sno}}"
+            method="POST"
+            novalidate
+          >
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                id="title"
+                name="title"
+                placeholder="Title"
+                style="height: 5rem"
+                data-sb-validations="required"
+              >
+{{post.title}}</textarea
+              >
+              <label for="title">Title</label>
+            </div>
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                id="subheading"
+                name="subheading"
+                placeholder="Sub-Heading"
+                style="height: 5rem"
+                data-sb-validations="required"
+              >
+{{post.subheading}}</textarea
+              >
+              <label for="subheading">Sub-Heading</label>
+            </div>
+            <div class="form-floating">
+              <input
+                class="form-control"
+                id="slug"
+                type="text"
+                name="slug"
+                placeholder="Slug"
+                data-sb-validations="required"
+                value="{{post.slug}}"
+              />
+              <label for="slug">Slug</label>
+            </div>
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                id="content"
+                name="content"
+                placeholder="content"
+                style="height:35rem"
+                data-sb-validations="required"
+              >
+{{post.content}}</textarea
+              >
+              <label for="content">Content</label>
+            </div>
+            <div class="form-floating">
+              <input
+                class="form-control"
+                id="by"
+                type="text"
+                name="by"
+                placeholder="By"
+                data-sb-validations="required"
+                value="{{post.by}}"
+              />
+              <label for="by">By</label>
+            </div>
+            <div class="form-floating">
+              <input
+                class="form-control"
+                id="img_file"
+                type="text"
+                name="img_file"
+                placeholder="Name of Img File"
+                data-sb-validations="required"
+                value="{{post.img_file}}"
+              />
+              <label for="img_file">Name of Img File</label>
+            </div>
+            <br />
+            <!-- Submit success message-->
+            <!---->
+            <!-- This is what your users will see when the form-->
+            <!-- has successfully submitted-->
+            <div class="d-none" id="submitSuccessMessage">
+              <div class="text-center mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                To activate this form, sign up at
+                <br />
+                <a href="https://startbootstrap.com/solution/contact-forms"
+                  >https://startbootstrap.com/solution/contact-forms</a
+                >
+              </div>
+            </div>
+            <!-- Submit error message-->
+            <!---->
+            <!-- This is what your users will see when there is-->
+            <!-- an error submitting the form-->
+            <div class="d-none" id="submitErrorMessage">
+              <div class="text-center text-danger mb-3">
+                Error sending message!
+              </div>
+            </div>
+            <!-- Submit Button-->
+            <button class="btn btn-primary" id="submitButton" type="submit">
+              Send
+            </button>
+
+            <button class="btn btn-primary" id="show">
+              <a style="color: white" href="/post/{{post.slug}}"
+                >Show Blog Page</a
+              >
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{%endblock%}

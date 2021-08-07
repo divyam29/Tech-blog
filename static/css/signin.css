@@ -1,0 +1,132 @@
+body
+{
+    margin:3.2%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+p.heading
+{
+    font-weight: 100;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-family: Algerian;
+}
+.form
+{
+    margin: 7%;
+    width: 40%;
+    height: 560px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2.0px );
+    -webkit-backdrop-filter: blur( 2.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+}
+p
+{
+    font-size: large;
+    color: rgb(0, 0, 0);
+}
+.enter
+{
+    height: 7vh;
+    width: 80%;
+}
+::placeholder
+{
+    color: rgb(0, 0, 0);
+    text-indent: 5%;
+}
+.enter:hover
+{
+    cursor:text;
+}
+.enter input
+{
+    line-height: 6.5vh;
+    border: none;
+    border-bottom: 5px solid rgb(0, 0, 0);
+    border-bottom-left-radius: 40px;
+    outline: none;
+    height: 7vh;
+    width: 80%;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    background-color: transparent;
+    transition: width 0.2s;
+    text-indent: 5%;
+}
+.enter input:focus, .enter input:hover
+{
+    width: 100%;
+}
+.cancel
+{
+    background-color: rgb(0, 0, 0,0.6);
+    width: 80%;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 50px;
+    height: 12vh;
+    top: 0px;
+}
+.cancel input
+{
+    opacity: 1;
+    float: left;
+    background-color: red;
+    border: none;
+    border-radius: 30px;
+    height:7vh;
+    width: 20vh;
+    color: white;
+    margin-top: 18px;
+    margin-left: 15px;
+    font-size: large;
+    outline: none;
+}
+.submit input
+{
+    background-color: green;
+    border: none;
+    border-radius: 30px;
+    height: 7vh;
+    width: 70%;
+    color: white;
+    font-size: large;
+    margin: 0 4px;
+    outline: none;
+}
+.submit input:hover
+{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.cancel input:hover
+{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.cancel a
+{
+    margin-top: 30px;
+    margin-right: 15px;
+    float: right;
+    font-size: large;
+    color: rgb(70, 70, 233);
+}
+.cancel a:hover
+{
+    color: rgb(108, 14, 151);
+   
+}
+.check
+{
+    float: left;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    margin-left:15%;
+    margin-top: 15px;
+}
