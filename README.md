@@ -1,2 +1,2 @@
 # Tech-Blog
-This is my first website with complete backend using flask and python.
+Blog page with backend using python (flask) and mysql as database.
